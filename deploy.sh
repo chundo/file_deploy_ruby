@@ -36,8 +36,16 @@ unzip master.zip &&
 mkdir ~/.rbenv/plugins &&
 mkdir ~/.rbenv/plugins/ruby-build &&
 mv ruby-build-master/* ~/.rbenv/plugins/ruby-build &&
-echo 'export PATH="$HOME/.rbenv/plugins/ruby-build/bin:$PATH"' >> ~/.bashrc
+echo 'export PATH="$HOME/.rbenv/plugins/ruby-build/bin:$PATH"' >> ~/.bashrc &&
+
 #git clone https://github.com/rbenv/rbenv-vars.git ~/.rbenv/plugins/rbenv-vars &&
+rm *.zip &&
+# rm -r rbenv-vars-master &&
+wget https://github.com/rbenv/rbenv-vars/archive/refs/heads/master.zip &&
+unzip master.zip &&
+mkdir ~/.rbenv/plugins/rbenv-vars &&
+mv rbenv-vars-master/* ~/.rbenv/plugins/ruby-vars
+
 #exec $SHELL &&
 #rbenv install 3.1.2 &&
 #rbenv global 3.1.2 &&
