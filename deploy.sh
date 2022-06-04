@@ -18,10 +18,11 @@ sudo apt-get -y install git-core curl zlib1g-dev build-essential libssl-dev libr
 #3 Instalar rbenv
 rm *.zip &&
 # rm -r ~/.rbenv &&
+rm -r rbenv-master &&
 # git clone https://github.com/rbenv/rbenv.git ~/.rbenv &&
 wget https://github.com/rbenv/rbenv/archive/refs/heads/master.zip  &&
 unzip master.zip &&
-mv rbenv-master/* ~/.rbenv
+mv rbenv-master/* /root/.rbenv
 #mv rbenv-master rbenv &&
 #mv  rbenv/* ~/.rbenv &&
 #echo 'export PATH="$HOME/.rbenv/bin:$PATH"' >> ~/.bashrc &&
