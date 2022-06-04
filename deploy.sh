@@ -25,7 +25,8 @@ unzip master.zip &&
 mkdir /root/.rbenv &&
 mv rbenv-master/* /root/.rbenv &&
 echo 'export PATH="/roo/.rbenv/bin:$PATH"' >> /root/.bashrc &&
-echo 'eval "$(rbenv init -)"' >> ~/.bashrc
+echo 'eval "$(rbenv init -)"' >> ~/.bashrc &&
+echo '--------------'
 #git clone https://github.com/rbenv/ruby-build.git ~/.rbenv/plugins/ruby-build &&
 #echo 'export PATH="$HOME/.rbenv/plugins/ruby-build/bin:$PATH"' >> ~/.bashrc &&
 #git clone https://github.com/rbenv/rbenv-vars.git ~/.rbenv/plugins/rbenv-vars &&
