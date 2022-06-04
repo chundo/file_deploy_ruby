@@ -40,7 +40,7 @@ echo 'export PATH="$HOME/.rbenv/plugins/ruby-build/bin:$PATH"' >> ~/.bashrc &&
 
 #git clone https://github.com/rbenv/rbenv-vars.git ~/.rbenv/plugins/rbenv-vars &&
 rm *.zip &&
-# rm -r rbenv-vars-master &&
+rm -r rbenv-vars-master &&
 wget https://github.com/rbenv/rbenv-vars/archive/refs/heads/master.zip &&
 unzip master.zip &&
 mkdir ~/.rbenv/plugins/rbenv-vars &&
