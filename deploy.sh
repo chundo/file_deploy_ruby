@@ -33,7 +33,8 @@ rm -r ruby-build-master &&
 wget https://github.com/rbenv/ruby-build/archive/refs/heads/master.zip &&
 unzip master.zip &&
 mkdir /root/.rbenv/plugins &&
-mkdir /root/.rbenv/plugins/ruby-build
+mkdir /root/.rbenv/plugins/ruby-build &&
+mv ruby-build-master/* /root/.rbenv/plugins/ruby-build
 
 #echo 'export PATH="$HOME/.rbenv/plugins/ruby-build/bin:$PATH"' >> ~/.bashrc &&
 #git clone https://github.com/rbenv/rbenv-vars.git ~/.rbenv/plugins/rbenv-vars &&
