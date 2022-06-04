@@ -16,13 +16,13 @@ sudo apt-get update &&
 sudo apt-get -y install git-core curl zlib1g-dev build-essential libssl-dev libreadline-dev libyaml-dev libsqlite3-dev sqlite3 libxml2-dev libxslt1-dev libcurl4-openssl-dev software-properties-common libffi-dev dirmngr gnupg apt-transport-https ca-certificates redis-server redis-tools nodejs yarn
 
 #3 Instalar rbenv
-git clone https://github.com/rbenv/rbenv.git ~/.rbenv
-echo 'export PATH="$HOME/.rbenv/bin:$PATH"' >> ~/.bashrc
-echo 'eval "$(rbenv init -)"' >> ~/.bashrc
-git clone https://github.com/rbenv/ruby-build.git ~/.rbenv/plugins/ruby-build
-echo 'export PATH="$HOME/.rbenv/plugins/ruby-build/bin:$PATH"' >> ~/.bashrc
-git clone https://github.com/rbenv/rbenv-vars.git ~/.rbenv/plugins/rbenv-vars
-exec $SHELL
-rbenv install 3.1.2
-rbenv global 3.1.2
+git clone https://github.com/rbenv/rbenv.git ~/.rbenv &&
+echo 'export PATH="$HOME/.rbenv/bin:$PATH"' >> ~/.bashrc &&
+echo 'eval "$(rbenv init -)"' >> ~/.bashrc &&
+git clone https://github.com/rbenv/ruby-build.git ~/.rbenv/plugins/ruby-build &&
+echo 'export PATH="$HOME/.rbenv/plugins/ruby-build/bin:$PATH"' >> ~/.bashrc &&
+git clone https://github.com/rbenv/rbenv-vars.git ~/.rbenv/plugins/rbenv-vars &&
+exec $SHELL &&
+rbenv install 3.1.2 &&
+rbenv global 3.1.2 &&
 ruby -v
