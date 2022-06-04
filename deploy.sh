@@ -65,7 +65,7 @@ if [ ! -f /etc/nginx/modules-enabled/50-mod-http-passenger.conf ]; then sudo ln 
 sudo ls /etc/nginx/conf.d/mod-http-passenger.conf  &&
 cp file_deploy_ruby-main/mod-http-passenger.conf  /etc/nginx/conf.d/ &&
 sudo service nginx start
-#  sudo rm /etc/nginx/sites-enabled/default
+sudo rm /etc/nginx/sites-enabled/default
 #  git clone https://gist.github.com/66f44320c8eb3f05a471d5ef7e647d5b.git 
 # sudo nano /etc/nginx/sites-enabled/myapp
 #  sudo service nginx reload
