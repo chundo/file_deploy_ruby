@@ -44,7 +44,7 @@ rm *.zip &&
 wget https://github.com/rbenv/rbenv-vars/archive/refs/heads/master.zip &&
 unzip master.zip &&
 mkdir ~/.rbenv/plugins/rbenv-vars &&
-mv rbenv-vars-master/* ~/.rbenv/plugins/ruby-vars
+mv rbenv-vars-master/* ~/.rbenv/plugins/rbenv-vars
 
 #exec $SHELL &&
 #rbenv install 3.1.2 &&
