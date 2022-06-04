@@ -17,8 +17,8 @@ sudo apt-get install -y unzip &&
 sudo apt-get -y install git-core curl zlib1g-dev build-essential libssl-dev libreadline-dev libyaml-dev libsqlite3-dev sqlite3 libxml2-dev libxslt1-dev libcurl4-openssl-dev software-properties-common libffi-dev dirmngr gnupg apt-transport-https ca-certificates redis-server redis-tools nodejs yarn &&
 
 #3 Instalar rbenv
-#rm *.zip &&
-#rm -r ~/.rbenv &&
+rm *.zip &&
+rm -r ~/.rbenv &&
 #rm -r rbenv-master &&
 
 # git clone https://github.com/rbenv/rbenv.git ~/.rbenv &&
@@ -46,20 +46,22 @@ wget https://github.com/rbenv/rbenv-vars/archive/refs/heads/master.zip &&
 unzip master.zip &&
 mkdir ~/.rbenv/plugins/rbenv-vars &&
 mv rbenv-vars-master/* ~/.rbenv/plugins/rbenv-vars &&
-exec $SHELL -l &&
-exec $SHELL &&
-sudo rbenv install 3.1.2 &&
-sudo rbenv global 3.1.2 &&
-ruby -v &&
+#exec $SHELL &&
+#source ~/.profile &&
+#sudo rbenv install 3.1.2 &&
+#sudo rbenv global 3.1.2 &&
+#ruby -v &&
 
 #4 Instalar Bundle  y Rails
-gem install bundler &&
-gem install bundler -v 1.17.3 &&
-bundle -v &&
+#gem install bundler &&
+#gem install bundler -v 1.17.3 &&
+#bundle -v &&
+
 
 #4 Installing NGINX & Passenger
+sudo apt-get install -y dirmngr gnupg &&
 sudo apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv 7F0CEB10 &&
-# sudo apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv-keys 561F9B9CAC40B2F7 &&
+sudo apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv-keys 561F9B9CAC40B2F7 &&
 sudo sh -c 'echo deb https://oss-binaries.phusionpassenger.com/apt/passenger focal main > /etc/apt/sources.list.d/passenger.list' &&
 sudo apt-get update &&
 sudo apt-get install -y nginx-extras libnginx-mod-http-passenger &&
