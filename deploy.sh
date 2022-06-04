@@ -17,7 +17,8 @@ sudo apt-get -y install git-core curl zlib1g-dev build-essential libssl-dev libr
 
 #3 Instalar rbenv
 rm -r ~/.rbenv &&
-git clone https://github.com/rbenv/rbenv.git ~/.rbenv &&
+# git clone https://github.com/rbenv/rbenv.git ~/.rbenv &&
+wget https://github.com/rbenv/rbenv/archive/refs/heads/master.zip  &&
 echo 'export PATH="$HOME/.rbenv/bin:$PATH"' >> ~/.bashrc &&
 echo 'eval "$(rbenv init -)"' >> ~/.bashrc &&
 git clone https://github.com/rbenv/ruby-build.git ~/.rbenv/plugins/ruby-build &&
