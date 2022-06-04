@@ -63,8 +63,8 @@ sudo apt-get update  &&
 sudo apt-get install -y nginx-extras libnginx-mod-http-passenger  &&
 if [ ! -f /etc/nginx/modules-enabled/50-mod-http-passenger.conf ]; then sudo ln -s /usr/share/nginx/modules-available/mod-http-passenger.load /etc/nginx/modules-enabled/50-mod-http-passenger.conf ; fi  &&
 sudo ls /etc/nginx/conf.d/mod-http-passenger.conf  &&
-cp file_deploy_ruby-main/mod-http-passenger.conf  /etc/nginx/conf.d/ &&
+sudo cp file_deploy_ruby-main/mod-http-passenger.conf  /etc/nginx/conf.d/ &&
 sudo service nginx start &&
 sudo rm /etc/nginx/sites-enabled/default &&
-cp file_deploy_ruby-main/myapp /etc/nginx/sites-enabled/ &&
+sudo cp file_deploy_ruby-main/myapp /etc/nginx/sites-enabled/ &&
 sudo service nginx reload
