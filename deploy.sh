@@ -22,6 +22,7 @@ rm -r rbenv-master &&
 # git clone https://github.com/rbenv/rbenv.git ~/.rbenv &&
 wget https://github.com/rbenv/rbenv/archive/refs/heads/master.zip  &&
 unzip master.zip &&
+mkdir /root/.rbenv &&
 mv rbenv-master/* /root/.rbenv
 #mv rbenv-master rbenv &&
 #mv  rbenv/* ~/.rbenv &&
