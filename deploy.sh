@@ -3,8 +3,8 @@
 
 #1 Creo un usuario
 
-adduser deploy &&
-adduser deploy sudo &&
+#adduser deploy &&
+#adduser deploy sudo &&
 
 #2 Actualizar OS, instalar dependencias y ruby
 curl -sL https://deb.nodesource.com/setup_12.x | sudo -E bash - &&
