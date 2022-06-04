@@ -20,15 +20,15 @@ rm *.zip &&
 rm -r ~/.rbenv &&
 # git clone https://github.com/rbenv/rbenv.git ~/.rbenv &&
 wget https://github.com/rbenv/rbenv/archive/refs/heads/master.zip  &&
-unzip master.zip &&
-mv rbenv-master rbenv &&
-mv  rbenv/* ~/.rbenv &&
-echo 'export PATH="$HOME/.rbenv/bin:$PATH"' >> ~/.bashrc &&
-echo 'eval "$(rbenv init -)"' >> ~/.bashrc &&
-git clone https://github.com/rbenv/ruby-build.git ~/.rbenv/plugins/ruby-build &&
-echo 'export PATH="$HOME/.rbenv/plugins/ruby-build/bin:$PATH"' >> ~/.bashrc &&
-git clone https://github.com/rbenv/rbenv-vars.git ~/.rbenv/plugins/rbenv-vars &&
-exec $SHELL &&
-rbenv install 3.1.2 &&
-rbenv global 3.1.2 &&
-ruby -v
+unzip master.zip ~/.rbenv
+#mv rbenv-master rbenv &&
+#mv  rbenv/* ~/.rbenv &&
+#echo 'export PATH="$HOME/.rbenv/bin:$PATH"' >> ~/.bashrc &&
+#echo 'eval "$(rbenv init -)"' >> ~/.bashrc &&
+#git clone https://github.com/rbenv/ruby-build.git ~/.rbenv/plugins/ruby-build &&
+#echo 'export PATH="$HOME/.rbenv/plugins/ruby-build/bin:$PATH"' >> ~/.bashrc &&
+#git clone https://github.com/rbenv/rbenv-vars.git ~/.rbenv/plugins/rbenv-vars &&
+#exec $SHELL &&
+#rbenv install 3.1.2 &&
+#rbenv global 3.1.2 &&
+#ruby -v
