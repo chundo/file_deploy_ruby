@@ -20,7 +20,8 @@ rm *.zip &&
 # rm -r ~/.rbenv &&
 # git clone https://github.com/rbenv/rbenv.git ~/.rbenv &&
 wget https://github.com/rbenv/rbenv/archive/refs/heads/master.zip  &&
-unzip master.zip -O ~/.rbenv
+unzip master.zip &&
+mv rbenv-master/* ~/.rbenv
 #mv rbenv-master rbenv &&
 #mv  rbenv/* ~/.rbenv &&
 #echo 'export PATH="$HOME/.rbenv/bin:$PATH"' >> ~/.bashrc &&
