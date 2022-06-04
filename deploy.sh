@@ -3,8 +3,8 @@
 
 #1 Creo un usuario
 
-adduser deploy &&
-adduser deploy sudo &&
+#adduser deploy &&
+#adduser deploy sudo &&
 
 #2 Actualizar OS, instalar dependencias y ruby
 curl -sL https://deb.nodesource.com/setup_12.x | sudo -E bash - &&
@@ -45,7 +45,8 @@ wget https://github.com/rbenv/rbenv-vars/archive/refs/heads/master.zip &&
 unzip master.zip &&
 mkdir ~/.rbenv/plugins/rbenv-vars &&
 mv rbenv-vars-master/* ~/.rbenv/plugins/rbenv-vars &&
+exec $SHELL -l &&
 exec $SHELL &&
-rbenv install 3.1.2 &&
-rbenv global 3.1.2 &&
+sudo rbenv install 3.1.2 &&
+sudo rbenv global 3.1.2 &&
 ruby -v
