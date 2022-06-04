@@ -31,6 +31,7 @@ echo 'eval "$(rbenv init -)"' >> ~/.bashrc &&
 rm *.zip &&
 wget https://github.com/rbenv/ruby-build/archive/refs/heads/master.zip &&
 unzip master.zip &&
+mkdir /root/.rbenv/plugins &&
 mkdir /root/.rbenv/plugins/ruby-build
 
 #echo 'export PATH="$HOME/.rbenv/plugins/ruby-build/bin:$PATH"' >> ~/.bashrc &&
