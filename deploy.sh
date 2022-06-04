@@ -19,22 +19,23 @@ sudo apt-get -y install git-core curl zlib1g-dev build-essential libssl-dev libr
 rm *.zip &&
 rm -r ~/.rbenv &&
 rm -r rbenv-master &&
+
 # git clone https://github.com/rbenv/rbenv.git ~/.rbenv &&
 wget https://github.com/rbenv/rbenv/archive/refs/heads/master.zip  &&
 unzip master.zip &&
 mkdir /root/.rbenv &&
 mv rbenv-master/* /root/.rbenv &&
-echo 'export PATH="/roo/.rbenv/bin:$PATH"' >> /root/.bashrc &&
+echo 'export PATH="$HOME/.rbenv/bin:$PATH"' >> ~/.bashrc &&
 echo 'eval "$(rbenv init -)"' >> ~/.bashrc &&
-#git clone https://github.com/rbenv/ruby-build.git ~/.rbenv/plugins/ruby-build &&
 
+#git clone https://github.com/rbenv/ruby-build.git ~/.rbenv/plugins/ruby-build &&
 rm *.zip &&
 rm -r ruby-build-master &&
 wget https://github.com/rbenv/ruby-build/archive/refs/heads/master.zip &&
 unzip master.zip &&
-mkdir /root/.rbenv/plugins &&
-mkdir /root/.rbenv/plugins/ruby-build &&
-mv ruby-build-master/* /root/.rbenv/plugins/ruby-build
+mkdir ~/.rbenv/plugins &&
+mkdir ~/.rbenv/plugins/ruby-build &&
+mv ruby-build-master/* ~/.rbenv/plugins/ruby-build
 
 #echo 'export PATH="$HOME/.rbenv/plugins/ruby-build/bin:$PATH"' >> ~/.bashrc &&
 #git clone https://github.com/rbenv/rbenv-vars.git ~/.rbenv/plugins/rbenv-vars &&
