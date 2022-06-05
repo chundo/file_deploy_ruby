@@ -3,7 +3,7 @@
 
 #1 Creo un usuario
 
-# adduser deploy &&
+# adduser deploy --disabled-password --gecos "" &&
 # adduser deploy sudo &&
 
 #2 Actualizar OS, instalar dependencias y ruby
@@ -15,3 +15,6 @@ sudo apt-get install -y nodejs yarn &&
 sudo apt-get update &&
 sudo apt-get install -y unzip &&
 sudo apt-get -y install git-core curl zlib1g-dev build-essential libssl-dev libreadline-dev libyaml-dev libsqlite3-dev sqlite3 libxml2-dev libxslt1-dev libcurl4-openssl-dev software-properties-common libffi-dev dirmngr gnupg apt-transport-https ca-certificates redis-server redis-tools nodejs yarn &&
+
+#3 Instalar rbenv
+rm *.zip
