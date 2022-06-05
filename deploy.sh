@@ -46,7 +46,7 @@ rm -rf *.zip &&
 rm -rf rbenv-vars &&
 wget https://github.com/rbenv/rbenv-vars/archive/refs/heads/master.zip -O rbenv-vars.zip &&
 unzip -d rbenv-vars -u -o rbenv-vars.zip &&
-mv ruby-vars/*/* ruby-vars/ &&
+mv rbenv-vars/*/* rbenv-vars/ &&
 mkdir -p ~/.rbenv/plugins/rbenv-vars &&
 mv -n rbenv-vars/* ~/.rbenv/plugins/rbenv-vars &&
 exec $SHELL &&
