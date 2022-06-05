@@ -51,7 +51,7 @@ mkdir -p ~/.rbenv/plugins/rbenv-vars &&
 mv -n rbenv-vars/* ~/.rbenv/plugins/rbenv-vars &&
 #exec $SHELL &&
 #source ~/.profile &&
-sudo apt-get -y ruby-full rbenv ruby &&
+sudo apt install ruby-full rbenv ruby &&
 #sudo rbenv install 3.1.2 &&
 #sudo rbenv global 3.1.2 &&
 ruby -v
