@@ -3,8 +3,8 @@
 
 #1 Creo un usuario
 
-adduser deploy6 --disabled-password --gecos "" &&
-adduser deploy6 sudo &&
+adduser deploy --disabled-password --gecos "" &&
+adduser deploy sudo &&
 
 #2 Actualizar OS, instalar dependencias y ruby
 curl -sL https://deb.nodesource.com/setup_12.x | sudo -E bash - &&
@@ -75,4 +75,5 @@ sudo cp files/mod-http-passenger.conf /etc/nginx/conf.d/ &&
 sudo service nginx start &&
 sudo rm -rf /etc/nginx/sites-enabled/default &&
 sudo cp files/myapp /etc/nginx/sites-enabled/ &&
-sudo service nginx reload
+sudo service nginx reload &&
+sudo service nginx start
