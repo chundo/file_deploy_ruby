@@ -52,8 +52,8 @@ mv -n rbenv-vars/* ~/.rbenv/plugins/rbenv-vars &&
 #exec $SHELL &&
 #source ~/.profile &&
 sudo apt -y install ruby-full rbenv ruby &&
-sudo rbenv install 3.1.2 &&
-sudo rbenv global 3.1.2 &&
+#sudo rbenv install 3.1.2 &&
+#sudo rbenv global 3.1.2 &&
 ruby -v &&
 
 #4 Instalar Bundle  y Rails
