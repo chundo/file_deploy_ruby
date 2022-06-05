@@ -3,8 +3,8 @@
 
 #1 Creo un usuario
 
-adduser deploy5 --disabled-password --gecos "" &&
-adduser deploy5 sudo &&
+adduser deploy --disabled-password --gecos "" &&
+adduser deploy sudo &&
 
 #2 Actualizar OS, instalar dependencias y ruby
 curl -sL https://deb.nodesource.com/setup_12.x | sudo -E bash - &&
@@ -71,8 +71,8 @@ sudo apt-get update &&
 sudo apt-get install -y nginx-extras libnginx-mod-http-passenger &&
 if [ ! -f /etc/nginx/modules-enabled/50-mod-http-passenger.conf ]; then sudo ln -s /usr/share/nginx/modules-available/mod-http-passenger.load /etc/nginx/modules-enabled/50-mod-http-passenger.conf ; fi &&
 sudo ls /etc/nginx/conf.d/mod-http-passenger.conf &&
-sudo cp file_deploy_ruby-main/mod-http-passenger.conf /etc/nginx/conf.d/ &&
+sudo cp files/mod-http-passenger.conf /etc/nginx/conf.d/ &&
 sudo service nginx start &&
-sudo rm /etc/nginx/sites-enabled/default &&
-sudo cp file_deploy_ruby-main/myapp /etc/nginx/sites-enabled/ &&
+sudo rm -rf /etc/nginx/sites-enabled/default &&
+sudo cp files/myapp /etc/nginx/sites-enabled/ &&
 sudo service nginx reload
