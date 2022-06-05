@@ -48,4 +48,7 @@ wget https://github.com/rbenv/rbenv-vars/archive/refs/heads/master.zip -O rbenv-
 unzip -d rbenv-vars -u -o rbenv-vars.zip &&
 mv ruby-vars/*/* ruby-vars/ &&
 mkdir -p ~/.rbenv/plugins/rbenv-vars &&
-mv -n rbenv-vars/* ~/.rbenv/plugins/rbenv-vars
+mv -n rbenv-vars/* ~/.rbenv/plugins/rbenv-vars &&
+exec $SHELL &&
+source ~/.profile &&
+echo 'Hola ------------------------------------------------------------------------'
