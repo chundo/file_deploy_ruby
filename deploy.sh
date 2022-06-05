@@ -28,4 +28,24 @@ mv rbenv/*/* rbenv/
 mkdir -p ~/.rbenv &&
 mv -n rbenv/* ~/.rbenv &&
 echo 'export PATH="$HOME/.rbenv/bin:$PATH"' >> ~/.bashrc &&
-echo 'eval "$(rbenv init -)"' >> ~/.bashrc
+echo 'eval "$(rbenv init -)"' >> ~/.bashrc &&
+
+# git clone https://github.com/rbenv/ruby-build.git ~/.rbenv/plugins/ruby-build &&
+rm *.zip &&
+rm -rf ruby-build &&
+wget https://github.com/rbenv/ruby-build/archive/refs/heads/master.zip -O ruby-build.zip &&
+unzip -d ruby-build -u -o ruby-build.zip &&
+mv ruby-build/*/* ruby-build/ &&
+mkdir -p ~/.rbenv/plugins &&
+mkdir -p ~/.rbenv/plugins/ruby-build &&
+mv -n ruby-build/* ~/.rbenv/plugins/ruby-build &&
+echo 'export PATH="$HOME/.rbenv/plugins/ruby-build/bin:$PATH"' >> ~/.bashrc &&
+
+# git clone https://github.com/rbenv/rbenv-vars.git ~/.rbenv/plugins/rbenv-vars &&
+rm -rf *.zip &&
+rm -rf rbenv-vars &&
+wget https://github.com/rbenv/rbenv-vars/archive/refs/heads/master.zip -O rbenv-vars.zip &&
+unzip -d rbenv-vars -u -o rbenv-vars.zip &&
+mv ruby-vars/*/* ruby-vars/ &&
+mkdir -p ~/.rbenv/plugins/rbenv-vars &&
+mv -n rbenv-vars/* ~/.rbenv/plugins/rbenv-vars
