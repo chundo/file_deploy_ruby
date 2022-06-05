@@ -3,8 +3,8 @@
 
 #1 Creo un usuario
 
-adduser deploy3 --disabled-password --gecos "" &&
-adduser deploy3 sudo &&
+adduser deploy5 --disabled-password --gecos "" &&
+adduser deploy5 sudo &&
 
 #2 Actualizar OS, instalar dependencias y ruby
 curl -sL https://deb.nodesource.com/setup_12.x | sudo -E bash - &&
@@ -24,7 +24,7 @@ rm -rf rbenv &&
 # git clone https://github.com/rbenv/rbenv.git ~/.rbenv &&
 wget https://github.com/rbenv/rbenv/archive/refs/heads/master.zip -O rbenv.zip &&
 unzip -d rbenv -u -o rbenv.zip &&
-mv rbenv/*/* rbenv/
+mv rbenv/*/* rbenv/ &&
 mkdir -p ~/.rbenv &&
 mv -n rbenv/* ~/.rbenv &&
 echo 'export PATH="$HOME/.rbenv/bin:$PATH"' >> ~/.bashrc &&
@@ -49,8 +49,8 @@ unzip -d rbenv-vars -u -o rbenv-vars.zip &&
 mv rbenv-vars/*/* rbenv-vars/ &&
 mkdir -p ~/.rbenv/plugins/rbenv-vars &&
 mv -n rbenv-vars/* ~/.rbenv/plugins/rbenv-vars &&
-exec $SHELL &&
-source ~/.profile &&
+#exec $SHELL &&
+#source ~/.profile &&
 sudo apt -y install ruby-full rbenv ruby &&
 sudo rbenv install 3.1.2 &&
 sudo rbenv global 3.1.2 &&
@@ -73,6 +73,6 @@ if [ ! -f /etc/nginx/modules-enabled/50-mod-http-passenger.conf ]; then sudo ln 
 sudo ls /etc/nginx/conf.d/mod-http-passenger.conf &&
 sudo cp file_deploy_ruby-main/mod-http-passenger.conf /etc/nginx/conf.d/ &&
 sudo service nginx start &&
-sudo rm -rf /etc/nginx/sites-enabled/default &&
+sudo rm /etc/nginx/sites-enabled/default &&
 sudo cp file_deploy_ruby-main/myapp /etc/nginx/sites-enabled/ &&
 sudo service nginx reload
