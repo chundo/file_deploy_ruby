@@ -51,4 +51,11 @@ mkdir -p ~/.rbenv/plugins/rbenv-vars &&
 mv -n rbenv-vars/* ~/.rbenv/plugins/rbenv-vars &&
 exec $SHELL &&
 source ~/.profile &&
-echo 'Hola ------------------------------------------------------------------------'
+sudo rbenv install 3.1.2 &&
+sudo rbenv global 3.1.2 &&
+ruby -v &&
+
+#4 Instalar Bundle  y Rails
+gem install bundler &&
+gem install bundler -v 1.17.3 &&
+bundle -v
