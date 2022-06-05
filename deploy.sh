@@ -3,8 +3,8 @@
 
 #1 Creo un usuario
 
-adduser deploy --disabled-password --gecos "" &&
-adduser deploy sudo &&
+adduser deploy6 --disabled-password --gecos "" &&
+adduser deploy6 sudo &&
 
 #2 Actualizar OS, instalar dependencias y ruby
 curl -sL https://deb.nodesource.com/setup_12.x | sudo -E bash - &&
